@@ -11,7 +11,15 @@ class View {
     this.mainContainerEl.append(newParagraph);
   }   
 
-  
+  clearParagraphs() {
+    const allParagaphs = document.querySelectorAll("p");
+    allParagaphs.forEach(paragraph => {
+      paragraph.remove()
+    })
+
+ 
+  }
+
     
 
 }

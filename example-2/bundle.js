@@ -16,6 +16,12 @@
           newParagraph.innerText = "This paragraph has been dynamically added by JavaScript!";
           this.mainContainerEl.append(newParagraph);
         }
+        clearParagraphs() {
+          const allParagaphs = document.querySelectorAll("p");
+          allParagaphs.forEach((paragraph) => {
+            paragraph.remove();
+          });
+        }
       };
       module.exports = View2;
     }

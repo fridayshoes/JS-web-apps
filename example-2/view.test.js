@@ -22,4 +22,13 @@ describe('Page View', () => {
     view.addParagraph()
     expect(document.querySelectorAll('p').length).toBe(3);
   });
+  it('Will clear all paragraphs ', () => {
+    const view = new View();
+    view.clearParagraphs()
+    expect(document.querySelectorAll('p').length).toBe(0);
+  });
 });
+
+
+
+  
