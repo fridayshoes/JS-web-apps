@@ -10,6 +10,8 @@ class View {
     newParagraph.innerText = 'This paragraph has been dynamically added by JavaScript!';
     this.mainContainerEl.append(newParagraph);
   }   
+
+  
     
 
 }
