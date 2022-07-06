@@ -18,4 +18,19 @@ describe('MessageView', () => {
     // Assert
     expect(document.querySelector('#message')).not.toBeNull();
   });
+
+  it('hides the message', () => {
+    // Arrange
+    document.body.innerHTML = fs.readFileSync('./index.html');
+
+    const view = new MessageView();
+    // Act
+    const buttonEl = document.querySelector('#show-message-button');
+    buttonEl.click();
+    const hideButtonEl = document.querySelector('#hide-message-button');
+    hideButtonEl.click();
+
+    // Assert
+    expect(document.querySelector('#message')).toBeNull();
+  });
 });
