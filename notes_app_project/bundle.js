@@ -7,7 +7,7 @@
   // model.js
   var require_model = __commonJS({
     "model.js"(exports, module) {
-      var NotesModel = class {
+      var NotesView = class {
         constructor() {
           this.notes = [];
         }
@@ -22,7 +22,7 @@
           this.notes = [];
         }
       };
-      module.exports = NotesModel;
+      module.exports = NotesView;
     }
   });
 

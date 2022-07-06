@@ -1,26 +1,26 @@
-const NoteModel = require('./model.js')
+const NotesView = require('./notesview.js')
 
-describe('NoteModel', () => {
+describe('NotesView', () => {
   describe('getNotes', () => {
     it('Will return a empty array', () => {
-      notes = new NoteModel
+      notes = new NotesView
       expect(notes.getNotes()).toEqual([])
     })
 
     describe('addNote', () => {
       it('Will add a note to the array', () => {
-        notes = new NoteModel
+        notes = new NotesView
         expect(notes.addNote('Buy Milk')).toEqual(['Buy Milk'])
       })
       it('Will add a note to the array', () => {
-        notes = new NoteModel
+        notes = new NotesView
         notes.addNote('Buy Milk')
         notes.addNote('Go to the gym')
         expect(notes.addNote()).toEqual(['Buy Milk','Go to the gym'])
       })
       describe('getNotes', () => {
         it('Will return the list of items', () => {
-          notes = new NoteModel
+          notes = new NotesView
           notes.addNote('Buy Milk')
           notes.addNote('Go to the gym')
           expect(notes.getNotes()).toEqual(['Buy Milk','Go to the gym'])
@@ -28,7 +28,7 @@ describe('NoteModel', () => {
       })
       describe('getNotes', () => {
         it('Will return the list of items', () => {
-          notes = new NoteModel
+          notes = new NotesView
           notes.addNote('Buy Milk')
           notes.addNote('Go to the gym')
           notes.reset()
@@ -37,7 +37,7 @@ describe('NoteModel', () => {
       })
       describe('getNotes', () => {
         it('Will return the list of items', () => {
-          notes = new NoteModel
+          notes = new NotesView
           notes.addNote('Buy Milk')
           notes.addNote('Go to the gym')
           notes.reset()
