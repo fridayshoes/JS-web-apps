@@ -18,9 +18,10 @@
           });
         }
         displayMessage() {
+          const message = document.querySelector("#message-input").value;
           const messageElement = document.createElement("div");
           messageElement.setAttribute("id", "message");
-          messageElement.innerText = "This message displayed by JavaScript";
+          messageElement.innerText = message;
           document.querySelector("#main-container").append(messageElement);
           console.log("Thanks for clicking me!");
         }
