@@ -4,9 +4,9 @@
     return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
   };
 
-  // model.js
-  var require_model = __commonJS({
-    "model.js"(exports, module) {
+  // notesview.js
+  var require_notesview = __commonJS({
+    "notesview.js"(exports, module) {
       var NotesView = class {
         constructor() {
           this.notes = [];
@@ -27,7 +27,7 @@
   });
 
   // index.js
-  var NoteModel = require_model();
+  var NoteModel = require_notesview();
   console.log("The notepad app is running");
   notemodel = new NoteModel();
   console.log(notemodel.getNotes());

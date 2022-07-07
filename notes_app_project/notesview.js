@@ -1,20 +1,20 @@
 class NotesView{
 
-constructor() {
-  this.notes = [];
-}
+  constructor() {
+    this.notes = [];
+  }
 
   getNotes() {
     return this.notes;
   }
 
   addNote(product) {
-     this.notes.push(product)
-     return this.notes
+    this.notes.push(product)
+    return this.notes
   }
 
   reset() {
-    this.notes = []
+  this.notes = []
   }
 }
 

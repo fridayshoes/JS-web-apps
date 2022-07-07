@@ -1,4 +1,4 @@
-const NoteModel = require('./model.js')
+const NoteModel = require('./notesview.js')
 
 console.log('The notepad app is running')
 
