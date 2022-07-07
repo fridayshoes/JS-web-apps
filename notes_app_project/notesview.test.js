@@ -1,4 +1,9 @@
-const NotesView = require('./notesview.js')
+/**
+ * @jest-environment jsdom
+ */
+
+const fs = require('fs'); //provides functionality to access interact with filesystem
+const NotesView = require('./notesview')
 
 describe('NotesView', () => {
   describe('getNotes', () => {
@@ -12,7 +17,7 @@ describe('NotesView', () => {
         notes = new NotesView
         expect(notes.addNote('Buy Milk')).toEqual(['Buy Milk'])
       })
-      it('Will add a note to the array', () => {
+      it('Will add multiple notes to the array', () => {
         notes = new NotesView
         notes.addNote('Buy Milk')
         notes.addNote('Go to the gym')
@@ -27,7 +32,7 @@ describe('NotesView', () => {
         }) 
       })
       describe('getNotes', () => {
-        it('Will return the list of items', () => {
+        it('Will add notes and then reset list of notes', () => {
           notes = new NotesView
           notes.addNote('Buy Milk')
           notes.addNote('Go to the gym')
@@ -36,7 +41,7 @@ describe('NotesView', () => {
         }) 
       })
       describe('getNotes', () => {
-        it('Will return the list of items', () => {
+        it('Will add notes, reset list, then add a new note', () => {
           notes = new NotesView
           notes.addNote('Buy Milk')
           notes.addNote('Go to the gym')

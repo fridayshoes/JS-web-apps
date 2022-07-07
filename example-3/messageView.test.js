@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-const fs = require('fs');
+const fs = require('fs'); //provides functionality to access interact with filesystem
 const MessageView = require('./messageView');
 
 describe('MessageView', () => {
