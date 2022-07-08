@@ -6,6 +6,7 @@ class NotesView {
     document.querySelector('#add-note-btn').addEventListener('click', () => {
       const newNote = document.querySelector('#add-note-input').value;
       this.addNewNote(newNote);
+      document.querySelector('#add-note-input').value = ""; // Clears the input after button is clicked
     });  
   }
   
@@ -16,10 +17,10 @@ class NotesView {
   
   
   displayNotes() {
-    // Remove all previous notes
-  document.querySelectorAll('.note').forEach(element => {
-    element.remove();
-  });
+    // Remove all previous notes from list
+    document.querySelectorAll('.note').forEach(element => {
+      element.remove();
+    });
     
     const notes = this.model.getNotes()
 
