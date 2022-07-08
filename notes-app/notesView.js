@@ -16,6 +16,11 @@ class NotesView {
   
   
   displayNotes() {
+    // Remove all previous notes
+  document.querySelectorAll('.note').forEach(element => {
+    element.remove();
+  });
+    
     const notes = this.model.getNotes()
 
     // For each note, create and append a new element on the main container
